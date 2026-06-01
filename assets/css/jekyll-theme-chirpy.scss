@@ -1,0 +1,114 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+.bundle
+{%- endif -%}
+';
+
+/* ================================
+   Juanes // Cybersecurity Theme
+   ================================ */
+
+:root {
+  --cyber-bg: #050807;
+  --cyber-bg-soft: #0b1110;
+  --cyber-card: #101816;
+  --cyber-green: #7dffb2;
+  --cyber-green-soft: rgba(125, 255, 178, 0.18);
+  --cyber-text-muted: #8fa39c;
+}
+
+/* Fondo general */
+body {
+  letter-spacing: 0.01rem;
+}
+
+/* Sidebar izquierda */
+#sidebar {
+  background:
+    radial-gradient(circle at top left, rgba(125, 255, 178, 0.08), transparent 35%),
+    linear-gradient(180deg, var(--cyber-bg) 0%, var(--cyber-bg-soft) 100%);
+  border-right: 1px solid var(--cyber-green-soft);
+}
+
+/* Título del sitio */
+#sidebar .site-title {
+  font-family: monospace;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+}
+
+/* Subtítulo */
+#sidebar .site-subtitle {
+  color: var(--cyber-text-muted);
+  font-size: 0.85rem;
+}
+
+/* Links */
+a {
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+/* Títulos de posts */
+.post-title,
+.post-preview h1,
+.post-preview h2,
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02rem;
+}
+
+/* Apariencia de cards/lista de posts */
+.post-preview {
+  border-bottom: 1px solid rgba(125, 255, 178, 0.08);
+  padding-bottom: 1.25rem;
+}
+
+.post-preview:hover {
+  transform: translateX(2px);
+  transition: transform 0.15s ease;
+}
+
+/* Código inline */
+code {
+  border-radius: 6px;
+  font-size: 0.92em;
+}
+
+/* Bloques de código */
+.highlight {
+  border: 1px solid rgba(125, 255, 178, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Quotes / prompts */
+blockquote {
+  border-left: 4px solid rgba(125, 255, 178, 0.4);
+}
+
+/* Imágenes dentro de posts */
+.post-content img {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Tabla de contenido */
+#toc-wrapper {
+  border-left: 1px solid rgba(125, 255, 178, 0.1);
+}
+
+/* Footer más discreto */
+footer {
+  color: var(--cyber-text-muted);
+}
+
+/* Selección de texto */
+::selection {
+  background: rgba(125, 255, 178, 0.25);
+}
